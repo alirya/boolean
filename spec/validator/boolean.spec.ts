@@ -7,8 +7,8 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = new Validator(BooleanMessage);
-        let validatable = validator.validate(<unknown>true);
+        let validator = Validator(BooleanMessage);
+        let validatable = validator(<unknown>true);
 
         if(validatable.valid) {
 
@@ -26,8 +26,8 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validator = new Validator(BooleanMessage);
-        let validatable = validator.validate({});
+        let validator = Validator(BooleanMessage);
+        let validatable = validator({});
 
         if(validatable.valid) {
 
@@ -46,8 +46,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = new Validator(BooleanMessage);
-        let validatable = validator.validate(1);
+        let validator = Validator(BooleanMessage);
+        let validatable = validator(1);
 
         try {
             // @ts-expect-error
@@ -74,8 +74,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = new Validator(BooleanMessage);
-    let validatable = validator.validate(false);
+    let validator = Validator(BooleanMessage);
+    let validatable = validator(false);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(false);
@@ -85,8 +85,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = new Validator(BooleanMessage);
-    let validatable = validator.validate('a');
+    let validator = Validator(BooleanMessage);
+    let validatable = validator('a');
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('a');

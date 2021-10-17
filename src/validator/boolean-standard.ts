@@ -8,5 +8,5 @@ import Validatable from "@dikac/t-validator/validatable/validatable";
  */
 export default function BooleanStandard() : Validator<any, boolean, Readonly<Validatable<any, string>>> {
 
-    return new Boolean(BooleanString);
+    return Boolean(BooleanString);
 }

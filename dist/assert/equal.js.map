@@ -1,0 +1,1 @@
+{"version":3,"file":"equal.js","sourceRoot":"","sources":["../../src/assert/equal.ts"],"names":[],"mappings":"AAAA,OAAO,aAAa,MAAM,qBAAqB,CAAC;AAChD,OAAO,QAAQ,MAAM,mCAAmC,CAAC;AACzD,OAAO,eAAe,MAAM,UAAU,CAAC;AAEvC;;GAEG;AAEH,MAAM,CAAC,OAAO,UAAU,KAAK,CACzB,KAAe,EACf,OAAiB,EACjB,QAAiC,aAAa;IAG9C,QAAQ,CAAU,KAAK,EAAE,eAAe,EAAE,KAAK,EAAE,OAAO,CAAC,CAAC;AAC9D,CAAC"}

@@ -8,25 +8,16 @@ import Validatable from "@dikac/t-validator/validatable/validatable";
 /**
  * {@see Validator} for boolean type
  */
-export default class Boolean<MessageType>
-    implements
-        Validator<any, boolean, Readonly<Validatable<any, MessageType>>>,
-        Message<(result:Readonly<Value & Validatable>)=>MessageType>
-{
 
-    /**
-     * @param message
-     * callback for generating value for {@see Message}
-     */
-    constructor(
-       public message : (result:Readonly<Value & Validatable>)=>MessageType
-    ) {
-    }
 
-    validate<Argument extends boolean>(value: Argument): Readonly<Validatable<boolean, MessageType, true>>
-    validate<Argument extends any>(value: Argument): Return<any, Argument, boolean, Readonly<Validatable<Argument, MessageType>>>
-    validate<Argument extends any>(value: Argument) {
+export default function Boolean<MessageType>(
+    message : (result:Readonly<Value & Validatable>)=>MessageType
+) : Validator<any, boolean, Readonly<Validatable<any, MessageType>>> {
 
-        return  NumberValidatable(value, this.message);
-    }
+    return function (value) {
+
+        return  NumberValidatable(value, message);
+
+    } as Validator<any, boolean, Readonly<Validatable<any, MessageType>>>
+
 }
