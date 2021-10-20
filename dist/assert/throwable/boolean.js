@@ -5,7 +5,7 @@ import BooleanMessage from "../string/boolean";
  * @param subject
  * @param conversion
  */
-export default function Boolean(value, subject, conversion) {
-    return new TypeError(BooleanMessage(false, value, subject, conversion));
+export default function Boolean({ value, subject, conversion = value => typeof value }) {
+    return new TypeError(BooleanMessage({ valid: false, value, subject, conversion }));
 }
 //# sourceMappingURL=boolean.js.map

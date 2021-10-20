@@ -7,7 +7,7 @@ import SentencesMust from "@dikac/t-string/message/sentences-must";
  * @param subject
  * @param conversion
  */
-export default function Boolean(valid, value, subject = 'type', conversion = value => typeof value) {
+export default function Boolean({ valid, value, subject = 'type', conversion = value => typeof value }) {
     let sentence = SentencesMust(valid);
     sentence.expect.push('boolean');
     sentence.subject.push(subject);

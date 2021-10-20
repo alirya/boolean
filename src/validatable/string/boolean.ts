@@ -4,5 +4,5 @@ import Assert from "../../assert/string/boolean";
 
 export default function Boolean(object : Readonly<Value & Validatable>) : string {
 
-    return Assert(object.valid, object.value)
+    return Assert(object)
 }

@@ -13,12 +13,19 @@ export default function Equal<
     TypeType extends BaseType = BaseType,
     MessageType = unknown,
 >(
-    value : ValueType,
-    compare : TypeType,
-    message : (result:Readonly<Value<[ValueType, TypeType]> & Validatable<boolean>>)=>MessageType,
+    {
+        value,
+        compare,
+        message,
+    } : Value<ValueType> & {compare : TypeType} & Message<(result:Readonly<Value<[ValueType, TypeType]> & Validatable<boolean>>)=>MessageType>
 ) : Simple<BaseType, ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>> {
 
-    const bs = new Callback([compare, value], (values: [BaseType, BaseType])=>BooleanEqual(...values), message);
+    const callback = Callback({
+        value:[compare, value],
+        validation: (values: [BaseType, BaseType]) => BooleanEqual(...values),
+        message
+});
 
-    return new ReadonlyMerge({value:value}, bs, bs) as Simple<BaseType, ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>>;
+    return new ReadonlyMerge({value:value}, callback, callback) as
+        Simple<BaseType, ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>>;
 }

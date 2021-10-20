@@ -1,4 +1,6 @@
 import BooleanMessage from "../string/boolean";
+import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@dikac/t-value/value";
 
 /**
  * create {@see TypeError} from {@see BooleanMessage}
@@ -7,10 +9,12 @@ import BooleanMessage from "../string/boolean";
  * @param conversion
  */
 export default function Boolean(
-    value: unknown,
-    subject ?: string ,
-    conversion ?: (value:unknown)=>string
+    {
+        value,
+        subject,
+        conversion = value => typeof value
+    } : Value & {subject ?: string} & {conversion ?: (value:unknown)=>string}
 ) : TypeError {
 
-    return new TypeError(BooleanMessage(false, value, subject, conversion))
+    return new TypeError(BooleanMessage({valid:false, value, subject, conversion}))
 }

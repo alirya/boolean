@@ -1,9 +1,15 @@
 import ThrowableType from "../assert/throwable/boolean";
 import AssertType from "../assert/boolean";
-/**
- * Throw exception if given value is no boolean type
- */
-export default function Boolean(value, error = ThrowableType) {
+// export default function Boolean(
+//     value : unknown,
+//     error : (value:unknown)=>Error = ThrowableType
+// ) : boolean {
+//
+//     AssertType(value, error)
+//
+//     return value;
+// }
+export default function Boolean({ value, error = ThrowableType }) {
     AssertType(value, error);
     return value;
 }

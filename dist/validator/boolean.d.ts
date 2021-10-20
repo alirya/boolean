@@ -4,4 +4,5 @@ import Validatable from "@dikac/t-validator/validatable/validatable";
 /**
  * {@see Validator} for boolean type
  */
+export default function Boolean(): Validator<any, boolean, Readonly<Validatable<any, string>>>;
 export default function Boolean<MessageType>(message: (result: Readonly<Value & Validatable>) => MessageType): Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;

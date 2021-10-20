@@ -1,3 +1,5 @@
+import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@dikac/t-value/value";
 /**
  * make a string message for boolean type
  *
@@ -6,4 +8,8 @@
  * @param subject
  * @param conversion
  */
-export default function Boolean(valid: boolean, value: unknown, subject?: string, conversion?: (value: unknown) => string): string;
+export default function Boolean({ valid, value, subject, conversion }: Validatable & Value & {
+    subject?: string;
+} & {
+    conversion?: (value: unknown) => string;
+}): string;

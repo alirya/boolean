@@ -4,14 +4,18 @@ import Sentences from "@dikac/t-string/message/sentences";
 import SafeCast from "@dikac/t-string/safe-cast";
 
 export default function Equal(
-    object : Validatable & Value<[unknown, unknown]>
+    {
+        value,
+        valid,
+        conversion = SafeCast
+    } : Validatable & Value<[unknown, unknown]> & {conversion ?: (value:unknown)=>string}
 ) : string {
 
     const parts : string[] = [];
 
-    parts.push(`'${SafeCast(object.value[0])}'`);
+    parts.push(`'${conversion(value[0])}'`);
 
-    if(object.valid) {
+    if(valid) {
 
         parts.push('is');
 
@@ -21,7 +25,7 @@ export default function Equal(
     }
 
     parts.push('equal to');
-    parts.push(`'${SafeCast(object.value[1])}'`);
+    parts.push(`'${conversion(value[1])}'`);
 
     return parts.join(' ') + '.';
 }

@@ -8,8 +8,8 @@ import BooleanType from "../boolean";
 
 export default function Boolean(
     value : unknown,
-    error : (value:unknown)=>Error = ThrowableType
+    error : (value:unknown)=>Error = ThrowableType,
 ) : asserts value is boolean {
 
-    Callback(value, BooleanType, error);
+    Callback(value, {validation:BooleanType, error});
 }
