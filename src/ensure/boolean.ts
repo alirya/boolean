@@ -1,30 +1,13 @@
-import ThrowableType from "../assert/throwable/boolean";
-import AssertType from "../assert/boolean";
-import Value from "@dikac/t-value/value";
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+import {BooleanArgument} from "./boolean-parameter";
 
-/**
- * Throw exception if given value is no boolean type
- */
+namespace Boolean {
 
-export interface Argument extends Value<unknown> {
-    error?:(value:unknown)=>Error;
+    export const Parameter = BooleanParameter;
+    export const Parameters = BooleanParameters;
+    export type Argument = BooleanArgument;
 }
 
-// export default function Boolean(
-//     value : unknown,
-//     error : (value:unknown)=>Error = ThrowableType
-// ) : boolean {
-//
-//     AssertType(value, error)
-//
-//     return value;
-// }
-
-export default function Boolean({value, error = ThrowableType} : Argument) : boolean {
-
-    AssertType(value, error)
-
-    return value;
-}
-
+export default Boolean;
 

@@ -1,24 +1,12 @@
-import ThrowableType from "../assert/throwable/boolean";
-import AssertType from "../assert/equal";
-import Value from "@dikac/t-value/value";
+import EqualParameter, {EqualArgument} from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
 
-/**
- * Throw exception if given value is no boolean type
- */
-export interface Argument<Compare> extends Value<unknown> {
-    compare:Compare;
-    error?:(value:unknown)=>Error;
+namespace Equal {
+
+    export const Parameter = EqualParameter;
+    export const Parameters = EqualParameters;
+    export type Argument<Compare> = EqualArgument<Compare>;
 }
 
-export default function Equal<Compare extends unknown>({
-    value,
-    compare,
-    error = ThrowableType,
-} : Argument<Compare>) : Compare {
-
-    AssertType(value, {compare, error})
-
-    return value;
-}
-
+export default Equal;
 

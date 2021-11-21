@@ -1,5 +1,5 @@
-import ThrowableType from "./throwable/boolean";
-import Callback from "@dikac/t-function/assert/callback";
+import ThrowableType from "./throwable/boolean-parameter";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 import BooleanType from "../boolean";
 
 /**
@@ -11,5 +11,5 @@ export default function Boolean(
     error : (value:unknown)=>Error = ThrowableType,
 ) : asserts value is boolean {
 
-    Callback(value, {validation:BooleanType, error});
+    Callback(value, BooleanType, error);
 }

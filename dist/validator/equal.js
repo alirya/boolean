@@ -1,9 +1,9 @@
-import ValidatableEqual from "../validatable/equal";
-import EqualMessage from "../assert/string/equal";
-export default function Equal({ value, message = EqualMessage }) {
-    const compare = value;
-    return function (value) {
-        return ValidatableEqual({ value, compare, message });
-    };
-}
+import EqualParameter from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+var Equal;
+(function (Equal) {
+    Equal.Parameter = EqualParameter;
+    Equal.Parameters = EqualParameters;
+})(Equal || (Equal = {}));
+export default Equal;
 //# sourceMappingURL=equal.js.map

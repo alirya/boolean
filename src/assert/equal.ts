@@ -1,22 +1,12 @@
-import ThrowableType from "./throwable/boolean";
-import Callback from "@dikac/t-function/assert/callback";
-import EqualValidation from "../equal";
-import Value from "@dikac/t-value/value";
+import EqualParameter, {EqualArgument} from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
 
-/**
- * Throw exception if given value is not equal
- */
+namespace Equal {
 
-export interface Argument<Compare> {
-    compare:Compare;
-    error?:(value:unknown)=>Error;
+    export const Parameter = EqualParameter;
+    export const Parameters = EqualParameters;
+    export type Argument<Compare> = EqualArgument<Compare>;
 }
 
+export default Equal;
 
-export default function Equal<Compare extends unknown>(
-    value : unknown,
-    {compare, error = ThrowableType} : Argument<Compare>,
-) : asserts value is Compare {
-
-    Callback<unknown>(value, {validation: EqualValidation, error, argument:[compare]});
-}

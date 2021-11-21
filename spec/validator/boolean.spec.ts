@@ -1,5 +1,5 @@
-import Validator from "../../dist/validator/boolean";
-import BooleanMessage from "../../dist/validatable/string/boolean";
+import Validator from "../../dist/validator/boolean-parameters";
+import BooleanMessage from "../../dist/assert/string/boolean-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 

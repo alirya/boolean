@@ -1,5 +1,5 @@
-import EqualMessage from "../../../dist/assert/string/equal";
-import Equal from "../../../dist/validator/equal";
+import EqualMessage from "../../../dist/assert/string/equal-parameters";
+import Equal from "../../../dist/validator/equal-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

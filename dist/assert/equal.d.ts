@@ -1,8 +1,8 @@
-/**
- * Throw exception if given value is not equal
- */
-export interface Argument<Compare> {
-    compare: Compare;
-    error?: (value: unknown) => Error;
+import EqualParameter, { EqualArgument } from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+declare namespace Equal {
+    const Parameter: typeof EqualParameter;
+    const Parameters: typeof EqualParameters;
+    type Argument<Compare> = EqualArgument<Compare>;
 }
-export default function Equal<Compare extends unknown>(value: unknown, { compare, error }: Argument<Compare>): asserts value is Compare;
+export default Equal;

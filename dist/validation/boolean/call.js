@@ -1,4 +1,13 @@
-export default function Call(object) {
-    return object.validation(...object.argument);
-}
+// import Validation from "../validation";
+// import Argument from "@dikac/t-function/argument/argument";
+//
+//
+// export default function Call<
+//     Arguments extends unknown[]
+// >(
+//     object : Validation<Arguments> & Argument<Arguments>
+// ) : boolean {
+//
+//     return  object.validation(...object.argument);
+// }
 //# sourceMappingURL=call.js.map

@@ -1,4 +1,4 @@
-import Guard from "../../dist/ensure/boolean";
+import Guard from "../../dist/ensure/boolean-parameters";
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 function throws (message : string, callback : () => any) {

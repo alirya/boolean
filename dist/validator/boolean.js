@@ -1,8 +1,9 @@
-import NumberValidatable from "../validatable/boolean";
-import BooleanString from "../validatable/string/boolean";
-export default function Boolean(message = BooleanString) {
-    return function (value) {
-        return NumberValidatable({ value, message });
-    };
-}
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+var Boolean;
+(function (Boolean) {
+    Boolean.Parameter = BooleanParameter;
+    Boolean.Parameters = BooleanParameters;
+})(Boolean || (Boolean = {}));
+export default Boolean;
 //# sourceMappingURL=boolean.js.map

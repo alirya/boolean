@@ -1,8 +1,7 @@
-import Validator from "@dikac/t-validator/simple";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validator/validatable/validatable";
-/**
- * {@see Validator} for boolean type
- */
-export default function Boolean(): Validator<any, boolean, Readonly<Validatable<any, string>>>;
-export default function Boolean<MessageType>(message: (result: Readonly<Value & Validatable>) => MessageType): Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+declare namespace Boolean {
+    const Parameter: typeof BooleanParameter;
+    const Parameters: typeof BooleanParameters;
+}
+export default Boolean;

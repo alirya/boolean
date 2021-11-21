@@ -1,8 +1,9 @@
-import Value from "@dikac/t-value/value";
-/**
- * Throw exception if given value is no boolean type
- */
-export interface Argument extends Value<unknown> {
-    error?: (value: unknown) => Error;
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+import { BooleanArgument } from "./boolean-parameter";
+declare namespace Boolean {
+    const Parameter: typeof BooleanParameter;
+    const Parameters: typeof BooleanParameters;
+    type Argument = BooleanArgument;
 }
-export default function Boolean({ value, error }: Argument): boolean;
+export default Boolean;

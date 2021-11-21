@@ -1,12 +1,9 @@
-import Callback from "@dikac/t-validator/validatable/callback";
-import Guard from "../boolean";
-export default function Boolean({ value, // : Argument,
-message, // : (result:Validatable & Value)=>MessageType
- }) {
-    return Callback({
-        value,
-        validation: Guard,
-        message
-    });
-}
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+var Boolean;
+(function (Boolean) {
+    Boolean.Parameter = BooleanParameter;
+    Boolean.Parameters = BooleanParameters;
+})(Boolean || (Boolean = {}));
+export default Boolean;
 //# sourceMappingURL=boolean.js.map

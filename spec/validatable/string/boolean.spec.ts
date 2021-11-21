@@ -1,4 +1,4 @@
-import Boolean from "../../../dist/validatable/string/boolean";
+import Boolean from "../../../dist/assert/string/boolean-parameter";
 
 it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
 

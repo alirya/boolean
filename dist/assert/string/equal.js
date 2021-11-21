@@ -1,15 +1,9 @@
-import SafeCast from "@dikac/t-string/safe-cast";
-export default function Equal({ value, valid, conversion = SafeCast }) {
-    const parts = [];
-    parts.push(`'${conversion(value[0])}'`);
-    if (valid) {
-        parts.push('is');
-    }
-    else {
-        parts.push('is not');
-    }
-    parts.push('equal to');
-    parts.push(`'${conversion(value[1])}'`);
-    return parts.join(' ') + '.';
-}
+import EqualParameter from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+var Equal;
+(function (Equal) {
+    Equal.Parameter = EqualParameter;
+    Equal.Parameters = EqualParameters;
+})(Equal || (Equal = {}));
+export default Equal;
 //# sourceMappingURL=equal.js.map

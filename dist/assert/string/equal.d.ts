@@ -1,5 +1,7 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default function Equal({ value, valid, conversion }: Validatable & Value<[unknown, unknown]> & {
-    conversion?: (value: unknown) => string;
-}): string;
+import EqualParameter from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+declare namespace Equal {
+    const Parameter: typeof EqualParameter;
+    const Parameters: typeof EqualParameters;
+}
+export default Equal;

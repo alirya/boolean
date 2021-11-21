@@ -1,9 +1,8 @@
-import Value from "@dikac/t-value/value";
-/**
- * Throw exception if given value is no boolean type
- */
-export interface Argument<Compare> extends Value<unknown> {
-    compare: Compare;
-    error?: (value: unknown) => Error;
+import EqualParameter, { EqualArgument } from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+declare namespace Equal {
+    const Parameter: typeof EqualParameter;
+    const Parameters: typeof EqualParameters;
+    type Argument<Compare> = EqualArgument<Compare>;
 }
-export default function Equal<Compare extends unknown>({ value, compare, error, }: Argument<Compare>): Compare;
+export default Equal;

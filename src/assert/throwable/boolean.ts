@@ -1,20 +1,11 @@
-import BooleanMessage from "../string/boolean";
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
 
-/**
- * create {@see TypeError} from {@see BooleanMessage}
- * @param value
- * @param subject
- * @param conversion
- */
-export default function Boolean(
-    {
-        value,
-        subject,
-        conversion = value => typeof value
-    } : Value & {subject ?: string} & {conversion ?: (value:unknown)=>string}
-) : TypeError {
+namespace Boolean {
 
-    return new TypeError(BooleanMessage({valid:false, value, subject, conversion}))
+    export const Parameter = BooleanParameter;
+    export const Parameters = BooleanParameters;
 }
+
+export default Boolean;
+

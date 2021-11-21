@@ -1,16 +1,9 @@
-import ThrowableType from "../assert/throwable/boolean";
-import AssertType from "../assert/boolean";
-// export default function Boolean(
-//     value : unknown,
-//     error : (value:unknown)=>Error = ThrowableType
-// ) : boolean {
-//
-//     AssertType(value, error)
-//
-//     return value;
-// }
-export default function Boolean({ value, error = ThrowableType }) {
-    AssertType(value, error);
-    return value;
-}
+import BooleanParameter from "./boolean-parameter";
+import BooleanParameters from "./boolean-parameters";
+var Boolean;
+(function (Boolean) {
+    Boolean.Parameter = BooleanParameter;
+    Boolean.Parameters = BooleanParameters;
+})(Boolean || (Boolean = {}));
+export default Boolean;
 //# sourceMappingURL=boolean.js.map

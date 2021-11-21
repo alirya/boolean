@@ -1,7 +1,9 @@
-import ThrowableType from "../assert/throwable/boolean";
-import AssertType from "../assert/equal";
-export default function Equal({ value, compare, error = ThrowableType, }) {
-    AssertType(value, { compare, error });
-    return value;
-}
+import EqualParameter from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+var Equal;
+(function (Equal) {
+    Equal.Parameter = EqualParameter;
+    Equal.Parameters = EqualParameters;
+})(Equal || (Equal = {}));
+export default Equal;
 //# sourceMappingURL=equal.js.map

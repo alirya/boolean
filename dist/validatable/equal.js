@@ -1,12 +1,9 @@
-import BooleanEqual from "@dikac/t-boolean/equal";
-import ReadonlyMerge from "@dikac/t-validator/validatable/readonly-merge";
-import Callback from "@dikac/t-validator/validatable/callback";
-export default function Equal({ value, compare, message, }) {
-    const callback = Callback({
-        value: [compare, value],
-        validation: (values) => BooleanEqual(...values),
-        message
-    });
-    return new ReadonlyMerge({ value: value }, callback, callback);
-}
+import EqualParameter from "./equal-parameter";
+import EqualParameters from "./equal-parameters";
+var Equal;
+(function (Equal) {
+    Equal.Parameter = EqualParameter;
+    Equal.Parameters = EqualParameters;
+})(Equal || (Equal = {}));
+export default Equal;
 //# sourceMappingURL=equal.js.map
