@@ -28,12 +28,6 @@ export default function BooleanParameters(
 
     strings.push('boolean');
 
-    // let sentence = SentencesMust(valid);
-    // sentence.expect.push('boolean');
-    // sentence.subject.push(subject);
-    //
-    // sentence.comma.push('expect');
-
     if(!valid) {
 
         strings.push('actual', conversion(value));

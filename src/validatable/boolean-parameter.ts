@@ -21,14 +21,14 @@ export default function BooleanParameter<Argument, MessageType>({
 ) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, string>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
-       value,// : Argument,
-       message,// : (result:Validatable & Value)=>MessageType
+       value,
+       message,
    } : Value<Argument> & Message<Dynamic<Argument, MessageType>>,
 ) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
-        value,// : Argument,
-        message = NumberMessage,// : (result:Validatable & Value)=>MessageType
+        value,
+        message = NumberMessage,
     } : Value<Argument> & Message<Dynamic<Argument, MessageType|string>>,
 ) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType|string>>> {
 

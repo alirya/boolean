@@ -11,16 +11,6 @@ export interface BooleanArgument extends Value<unknown> {
     error?:(value:unknown)=>Error;
 }
 
-// export default function Boolean(
-//     value : unknown,
-//     error : (value:unknown)=>Error = ThrowableType
-// ) : boolean {
-//
-//     AssertType(value, error)
-//
-//     return value;
-// }
-
 export default function BooleanParameter({
     value,
     error = ThrowableType

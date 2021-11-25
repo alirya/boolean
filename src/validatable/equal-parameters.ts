@@ -25,7 +25,6 @@ export default function EqualParameters<
 >(
     value : ValueType,
     compare : TypeType,
-    // message : (result:Readonly<Value<[ValueType, TypeType]> & Validatable<boolean>>)=>MessageType,
     message : Dynamic<[ValueType, TypeType], MessageType>,
 ) : Simple<BaseType, ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>>;
 
@@ -37,7 +36,6 @@ export default function EqualParameters<
 >(
     value : ValueType,
     compare : TypeType,
-    // message : (result:Readonly<Value<[ValueType, TypeType]> & Validatable<boolean>>)=>MessageType,
     message : Dynamic<[ValueType, TypeType], MessageType|string> = EqualMessage,
 ) : Simple<BaseType, ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>> {
 

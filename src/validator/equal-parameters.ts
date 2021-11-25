@@ -13,27 +13,24 @@ export default function EqualParameters<
     Base = any,
     Type extends Base = Base,
     MessageType = unknown,
-    >(
+>(
     compare : Type,
-    //message : <Argument extends Base>(argument: Value<[Base, Type]> & ValidatableInterface) => MessageType
     message : Dynamic<[Base, Type], MessageType>,
 ) : Simple<Base, Type, Validatable<Base, MessageType>>
 
 export default function EqualParameters<
     Base = any,
     Type extends Base = Base,
-    >(
+>(
     compare : Type,
-    //message : <Argument extends Base>(argument: Value<[Base, Type]> & ValidatableInterface) => MessageType
 ) : Simple<Base, Type, Validatable<Base, string>>
 
 export default function EqualParameters<
     Base = any,
     Type extends Base = Base,
     MessageType = unknown,
-    >(
+>(
     compare : Type,
-    //message : <Argument extends Base>(argument: Value<[Base, Type]> & ValidatableInterface) => MessageType
     message : Dynamic<[Base, Type], MessageType|string> = EqualMessage,
 ) : Simple<Base, Type, Validatable<Base, MessageType|string>> {
 

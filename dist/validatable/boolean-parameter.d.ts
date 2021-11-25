@@ -13,5 +13,4 @@ import Dynamic from "@dikac/t-validator/message/function/dynamic-parameter";
  * for generating message
  */
 export default function BooleanParameter<Argument, MessageType>({ value, }: Value<Argument>): Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, string>>>;
-export default function BooleanParameter<Argument, MessageType>({ value, // : Argument,
-message, }: Value<Argument> & Message<Dynamic<Argument, MessageType>>): Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+export default function BooleanParameter<Argument, MessageType>({ value, message, }: Value<Argument> & Message<Dynamic<Argument, MessageType>>): Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
