@@ -30,6 +30,8 @@ export default function BooleanParameters(
 
     if(!valid) {
 
+        strings[2] = strings[2] + ',';
+
         strings.push('actual', conversion(value));
     }
 

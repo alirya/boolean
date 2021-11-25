@@ -17,6 +17,7 @@ export default function BooleanParameters(value, valid, subject = 'type', conver
     }
     strings.push('boolean');
     if (!valid) {
+        strings[2] = strings[2] + ',';
         strings.push('actual', conversion(value));
     }
     return strings.join(' ') + '.';
