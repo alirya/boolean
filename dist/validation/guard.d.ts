@@ -1,3 +1,4 @@
+import GuardFunction from "../function/guard";
 export default interface Guard<Argument, ValidType extends Argument, Arguments extends unknown[] = []> {
-    validation: (value: Argument, ...extras: Arguments) => value is ValidType;
+    validation: GuardFunction<Argument, ValidType, Arguments>;
 }
