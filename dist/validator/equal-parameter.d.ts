@@ -1,11 +1,17 @@
 import Value from "@dikac/t-value/value";
-import ValidatableInterface from "@dikac/t-validatable/validatable";
 import Simple from "@dikac/t-validator/simple";
 import Message from "@dikac/t-message/message";
-import ValidatorValidatable from "@dikac/t-validator/validatable/dynamic";
+import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
+import MessageDynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Dynamic from "@dikac/t-validator/value/validatable";
 /**
  * {@template Base} type which can be handled by implmentation
  * {@template Type} valid value type
  */
-export default function EqualParameter<Base = any, Type extends Base = Base>({ value }: Value<Type>): Simple<Base, Type, ValidatorValidatable<Base, string>>;
-export default function EqualParameter<Base = any, Type extends Base = Base, MessageType = unknown>({ value, message }: Message<(<Argument extends Base>(argument: Value<[Base, Type]> & ValidatableInterface) => MessageType)> & Value<Type>): Simple<Base, Type, ValidatorValidatable<Base, MessageType>>;
+export interface EqualParameterArgument<Allow = unknown, Expected = unknown, MessageType = unknown> extends Value<Allow>, Message<MessageDynamic<Allow, MessageType | string, Dynamic<Allow> & {
+    compare: Expected;
+}>> {
+    compare: Expected;
+}
+export default function EqualParameter<Allow = unknown, Expected = unknown>({ value }: EqualParameterArgument<Allow, Expected, string>): Simple<Allow, Expected, ValidatorValidatable<Allow, string>>;
+export default function EqualParameter<Allow = unknown, Expected = unknown, MessageType = unknown>({ value, message }: EqualParameterArgument<Allow, Expected, MessageType>): Simple<Allow, Expected, ValidatorValidatable<Allow, MessageType>>;

@@ -1,6 +1,6 @@
 import Return from "@dikac/t-validator/validatable/simple";
-import ValidatorValidatable from "@dikac/t-validator/validatable/dynamic";
-import Dynamic from "@dikac/t-validator/message/function/dynamic-parameters";
+import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 /**
  * validate if {@param value} is boolean
  *
@@ -10,5 +10,5 @@ import Dynamic from "@dikac/t-validator/message/function/dynamic-parameters";
  * @param message
  * for generating message
  */
-export default function BooleanParameters<Argument, MessageType>(value: Argument, message: Dynamic<Argument, MessageType>): Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
-export default function BooleanParameters<Argument, MessageType>(value: Argument): Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+export default function BooleanParameters<Argument, MessageType>(value: Argument, message: Dynamic<Argument, MessageType>): Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+export default function BooleanParameters<Argument, MessageType>(value: Argument): Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;

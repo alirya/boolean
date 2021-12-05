@@ -1,6 +1,6 @@
-export default interface Guard<Argument, ValidType extends Argument, Arguments extends unknown[] = []> {
+export default interface Guard<Allow, Expect, Arguments extends unknown[] = []> {
 
-    (value :Argument, ...extras : Arguments) : value is ValidType;
+    (value :Allow|Expect, ...extras : Arguments) : value is Expect;
 }
 
 

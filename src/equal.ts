@@ -3,8 +3,8 @@
  */
 export default function Equal<
     Value,
-    Compare extends Value
->(value : Value, compare : Compare) : value is Compare {
+    Compare
+>(value : Value|Compare, compare : Compare) : value is Compare {
 
     return value === compare;
 }

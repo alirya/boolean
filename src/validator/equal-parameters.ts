@@ -1,7 +1,7 @@
 import ValidatableEqual from "../validatable/equal-parameters";
-import Validatable from "@dikac/t-validator/validatable/dynamic";
+import Validatable from "@dikac/t-validator/validatable/validatable";
 import Simple from "@dikac/t-validator/simple";
-import Dynamic from "@dikac/t-validator/message/function/dynamic-parameters";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 import EqualMessage from "../assert/string/equal-parameters";
 
 /**
@@ -10,31 +10,31 @@ import EqualMessage from "../assert/string/equal-parameters";
  */
 
 export default function EqualParameters<
-    Base = any,
-    Type extends Base = Base,
+    Base = unknown,
+    Type = unknown,
     MessageType = unknown,
 >(
     compare : Type,
-    message : Dynamic<[Base, Type], MessageType>,
+    message : Dynamic<Base, MessageType, [Type]>,
 ) : Simple<Base, Type, Validatable<Base, MessageType>>
 
 export default function EqualParameters<
-    Base = any,
-    Type extends Base = Base,
+    Base = unknown,
+    Type = unknown,
 >(
     compare : Type,
 ) : Simple<Base, Type, Validatable<Base, string>>
 
 export default function EqualParameters<
-    Base = any,
-    Type extends Base = Base,
+    Base = unknown,
+    Type = unknown,
     MessageType = unknown,
 >(
     compare : Type,
-    message : Dynamic<[Base, Type], MessageType|string> = EqualMessage,
+    message : Dynamic<Base, MessageType|string, [Type]> = EqualMessage,
 ) : Simple<Base, Type, Validatable<Base, MessageType|string>> {
 
-    return function <Argument extends Base> (value)  {
+    return function (value)  {
 
         return ValidatableEqual(value, compare, message);
 

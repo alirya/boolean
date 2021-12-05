@@ -1,7 +1,7 @@
 import Validator from "@dikac/t-validator/simple";
-import Validatable from "@dikac/t-validator/validatable/dynamic";
+import Validatable from "@dikac/t-validator/validatable/validatable";
 import BooleanString from "../assert/string/boolean-parameter";
-import Dynamic from "@dikac/t-validator/message/function/dynamic-parameter";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import BooleanParameters from "./boolean-parameters";
 
 /**

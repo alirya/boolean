@@ -3,12 +3,16 @@ import Value from "@dikac/t-value/value";
 import SafeCast from "@dikac/t-string/safe-cast";
 import EqualParameters from "./equal-parameters";
 
-export default function EqualParameter(
+export default function EqualParameter<Allow, Expected>(
     {
-        value : [value, compare],
+        value, //: [value, compare],
         valid,
+        compare,
         conversion = SafeCast
-    } : Validatable & Value<[unknown, unknown]> & {conversion ?: (value:unknown)=>string}
+    } : Validatable & Value<Allow> & {
+        conversion ?: (value:Expected|Allow)=>string;
+        compare : Expected;
+    }
 ) : string {
 
     return EqualParameters(value, valid, compare, conversion);

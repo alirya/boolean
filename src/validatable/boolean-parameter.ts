@@ -1,8 +1,8 @@
 import Return from "@dikac/t-validator/validatable/simple";
-import ValidatorValidatable from "@dikac/t-validator/validatable/dynamic";
+import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
 import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/dynamic-parameter";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import BooleanParameters from "./boolean-parameters";
 import NumberMessage from "../assert/string/boolean-parameter";
 
@@ -18,19 +18,19 @@ import NumberMessage from "../assert/string/boolean-parameter";
 export default function BooleanParameter<Argument, MessageType>({
        value,
    } : Value<Argument>,
-) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, string>>>;
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, string>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
        value,
        message,
    } : Value<Argument> & Message<Dynamic<Argument, MessageType>>,
-) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
         value,
         message = NumberMessage,
     } : Value<Argument> & Message<Dynamic<Argument, MessageType|string>>,
-) : Return<any, Argument, boolean, Readonly<ValidatorValidatable<any, MessageType|string>>> {
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType|string>>> {
 
     return BooleanParameters(value, (value, valid) => message({value, valid}));
 }

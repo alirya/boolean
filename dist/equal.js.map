@@ -1,1 +1,1 @@
-{"version":3,"file":"equal.js","sourceRoot":"","sources":["../src/equal.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,CAAC,OAAO,UAAU,KAAK,CAG3B,KAAa,EAAE,OAAiB;IAE9B,OAAO,KAAK,KAAK,OAAO,CAAC;AAC7B,CAAC"}
+{"version":3,"file":"equal.js","sourceRoot":"","sources":["../src/equal.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,CAAC,OAAO,UAAU,KAAK,CAG3B,KAAqB,EAAE,OAAiB;IAEtC,OAAO,KAAK,KAAK,OAAO,CAAC;AAC7B,CAAC"}
