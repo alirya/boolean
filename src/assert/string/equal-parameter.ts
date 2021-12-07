@@ -5,7 +5,7 @@ import EqualParameters from "./equal-parameters";
 
 export default function EqualParameter<Allow, Expected>(
     {
-        value, //: [value, compare],
+        value,
         valid,
         compare,
         conversion = SafeCast
