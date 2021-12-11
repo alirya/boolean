@@ -11,7 +11,7 @@ export interface EqualParameterArgument <
     ValueType = unknown,
     TypeType = unknown,
     MessageType = unknown,
-    > extends Value<ValueType>, Message<MessageDynamic<ValueType, MessageType|string, Dynamic<ValueType> & {compare : TypeType}>> {
+    > extends Value<ValueType>, Message<MessageDynamic<ValueType|TypeType, MessageType|string, Dynamic<ValueType|TypeType> & {compare : TypeType}>> {
     compare : TypeType
 }
 
@@ -49,5 +49,7 @@ export default function EqualParameter<
     } : EqualParameterArgument<ValueType, TypeType, MessageType>
 ) : Simple<ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType|string>>> {
 
-    return EqualParameters(value, compare, (value, valid, compare) => message({value, valid, compare}))
+    return EqualParameters(value, compare,
+        (value, valid, compare) => message({value, valid, compare})
+    )
 }

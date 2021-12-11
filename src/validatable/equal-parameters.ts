@@ -1,6 +1,6 @@
 import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
-import BooleanEqual from "../equal";
+import BooleanEqual from "../equal-parameters";
 import Validatable from "@dikac/t-validatable/validatable";
 import ReadonlyMerge from "@dikac/t-validator/validatable/readonly-wrapper-parameters";
 import Callback from "@dikac/t-validator/validatable/callback-class-parameters";
@@ -23,7 +23,7 @@ export default function EqualParameters<
 >(
     value : ValueType,
     compare : TypeType,
-    message : Dynamic<ValueType, MessageType, [TypeType]>,
+    message : Dynamic<ValueType|TypeType, MessageType, [TypeType]>,
 ) : Simple<ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>>;
 
 export default function EqualParameters<
@@ -33,10 +33,10 @@ export default function EqualParameters<
 >(
     value : ValueType,
     compare : TypeType,
-    message : Dynamic<ValueType, MessageType|string, [TypeType]> = EqualMessage,
+    message : Dynamic<ValueType|TypeType, MessageType|string, [TypeType]> = EqualMessage,
 ) : Simple<ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>> {
 
-    const bs = new Callback(value, BooleanEqual, message, [compare]);
+    const bs = new Callback<ValueType|TypeType>(value, BooleanEqual, message, [compare]);
 
     return new ReadonlyMerge({value:value}, bs, bs) as Simple<ValueType, TypeType, Readonly<Value<ValueType> & Validatable & Message<MessageType>>>;
 }
