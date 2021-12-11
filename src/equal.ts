@@ -1,12 +1,8 @@
+import Equal from "./equal-parameters";
 /**
- * compare {@param value} with {@param compare} using === comparison
+ * @deprecated
+ * use original version instead
  */
-export default function Equal<
-    Value,
-    Compare
->(value : Value|Compare, compare : Compare) : value is Compare {
-
-    return value === compare;
-}
+export default Equal;
 
 
