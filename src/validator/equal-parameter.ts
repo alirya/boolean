@@ -1,6 +1,5 @@
 import Value from "@dikac/t-value/value";
 import ValidatableEqual from "../validatable/equal-parameter";
-import ValidatableInterface from "@dikac/t-validatable/validatable";
 import Validatable from "@dikac/t-validator/validatable/validatable";
 import Simple from "@dikac/t-validator/simple";
 import Message from "@dikac/t-message/message";
@@ -14,7 +13,7 @@ import Dynamic from "@dikac/t-validator/value/validatable";
  * {@template Type} valid value type
  */
 
-export interface EqualParameterArgument <
+export interface EqualParameterArgument<
     Allow = unknown,
     Expected = unknown,
     MessageType = unknown,
