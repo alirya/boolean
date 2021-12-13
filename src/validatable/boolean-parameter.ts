@@ -18,19 +18,19 @@ import NumberMessage from "../assert/string/boolean-parameter";
 export default function BooleanParameter<Argument, MessageType>({
        value,
    } : Value<Argument>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, string>>>;
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, string>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
        value,
        message,
    } : Value<Argument> & Message<Dynamic<Argument, MessageType>>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, MessageType>>>;
 
 export default function BooleanParameter<Argument, MessageType>({
         value,
         message = NumberMessage,
     } : Value<Argument> & Message<Dynamic<Argument, MessageType|string>>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType|string>>> {
+) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, MessageType|string>>> {
 
     return BooleanParameters(value, (value, valid) => message({value, valid}));
 }

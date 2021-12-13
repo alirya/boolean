@@ -7,6 +7,7 @@ import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
 import EqualMessage from "../assert/string/equal-parameter";
 import MessageDynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import Dynamic from "@dikac/t-validator/value/validatable";
+import EqualParameters from "./equal-parameters";
 
 /**
  * {@template Base} type which can be handled by implmentation
@@ -48,11 +49,10 @@ export default function EqualParameter<
 
     const compare = value;
 
-    return function (value)  {
-
-        return ValidatableEqual({value, compare, message});
-
-    } as Simple<Allow, Expected, Validatable<Allow, MessageType|string>>
+    return EqualParameters(
+        value,
+        (value, valid) => message({value, compare, valid})
+    );
 }
 
 

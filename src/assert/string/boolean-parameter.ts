@@ -16,7 +16,10 @@ export default function BooleanParameter(
         value,
         subject = 'type',
         conversion = value => typeof value
-    } : Validatable & Value & {subject ?: string} & {conversion ?: (value:unknown)=>string}
+    } : Validatable & Value & {
+        subject ?: string,
+        conversion ?: (value:unknown)=>string
+    }
 ) : string {
 
     return BooleanParameters(value, valid, subject, conversion);
