@@ -1,4 +1,4 @@
-import ValueType from "@dikac/t-value/value";
+import ValueType from "@alirya/value/value";
 import CompareType from "./compare/compare";
 import EqualParameters from "./equal-parameters";
 /**

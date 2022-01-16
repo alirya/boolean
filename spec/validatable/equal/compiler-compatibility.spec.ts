@@ -13,7 +13,7 @@ it('implicit', function () {
         let unknown : unknown = equal.value;
 
     } else {
-        // @ts-expect-error
+        // @ts-expecerror
         let number : number = equal.value;
         let unknown : unknown = equal.value;
     }
@@ -26,13 +26,13 @@ describe('explicit partial', function () {
 
     if(equal.valid) {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let specific : 2 = equal.value;
         let number : number = equal.value;
         let unknown : unknown = equal.value;
 
     } else {
-        // @ts-expect-error
+        // @ts-expecerror
         let specific : 1 = equal.value;
         let number : number = equal.value;
         let unknown : unknown = equal.value;

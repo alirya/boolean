@@ -1,4 +1,4 @@
-import Guard from "@dikac/t-function/boolean/guard";
+import Guard from "@alirya/function/boolean/guard";
 
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -39,7 +39,7 @@ describe('basic', () =>{
 
         } else {
 
-            // @ts-expect-error
+            // @ts-expecerror
             const string : string = valid;
             const number : number = valid;
             const unknown : unknown = valid;
@@ -58,7 +58,7 @@ describe('basic', () =>{
 
         } else {
 
-            // @ts-expect-error
+            // @ts-expecerror
             const string : string = valid;
             const unknown : unknown = valid;
         }

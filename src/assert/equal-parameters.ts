@@ -1,5 +1,5 @@
 import ThrowableType from "./throwable/boolean-parameter";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import EqualValidation from "../equal";
 
 /**

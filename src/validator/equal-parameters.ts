@@ -1,7 +1,7 @@
 import ValidatableEqual from "../validatable/equal-parameters";
-import Validatable from "@dikac/t-validator/validatable/validatable";
-import Simple from "@dikac/t-validator/simple";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
+import Validatable from "@alirya/validator/validatable/validatable";
+import Simple from "@alirya/validator/simple";
+import Dynamic from "@alirya/validator/message/function/validatable-parameters";
 import EqualMessage from "../assert/string/equal-parameters";
 
 /**

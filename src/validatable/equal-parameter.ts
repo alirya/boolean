@@ -1,11 +1,11 @@
-import Value from "@dikac/t-value/value";
-import Message from "@dikac/t-message/message";
-import Validatable from "@dikac/t-validatable/validatable";
-import Simple from "@dikac/t-validator/validatable/simple";
+import Value from "@alirya/value/value";
+import Message from "@alirya/message/message";
+import Validatable from "@alirya/validatable/validatable";
+import Simple from "@alirya/validator/validatable/simple";
 import EqualParameters from "./equal-parameters";
-import MessageDynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import MessageDynamic from "@alirya/validator/message/function/validatable-parameter";
 import EqualMessage from "../assert/string/equal-parameter";
-import Dynamic from "@dikac/t-validator/value/validatable";
+import Dynamic from "@alirya/validator/value/validatable";
 
 export interface EqualParameterArgument <
     ValueType = unknown,

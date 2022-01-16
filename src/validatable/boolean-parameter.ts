@@ -1,8 +1,8 @@
-import Return from "@dikac/t-validator/validatable/simple";
-import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
-import Value from "@dikac/t-value/value";
-import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Return from "@alirya/validator/validatable/simple";
+import ValidatorValidatable from "@alirya/validator/validatable/validatable";
+import Value from "@alirya/value/value";
+import Message from "@alirya/message/message";
+import Dynamic from "@alirya/validator/message/function/validatable-parameter";
 import BooleanParameters from "./boolean-parameters";
 import NumberMessage from "../assert/string/boolean-parameter";
 

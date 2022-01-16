@@ -1,2 +1,2 @@
-# t-boolean
+# boolean
 typescript boolean

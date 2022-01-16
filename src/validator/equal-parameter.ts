@@ -1,12 +1,12 @@
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import ValidatableEqual from "../validatable/equal-parameter";
-import Validatable from "@dikac/t-validator/validatable/validatable";
-import Simple from "@dikac/t-validator/simple";
-import Message from "@dikac/t-message/message";
-import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
+import Validatable from "@alirya/validator/validatable/validatable";
+import Simple from "@alirya/validator/simple";
+import Message from "@alirya/message/message";
+import ValidatorValidatable from "@alirya/validator/validatable/validatable";
 import EqualMessage from "../assert/string/equal-parameter";
-import MessageDynamic from "@dikac/t-validator/message/function/validatable-parameter";
-import Dynamic from "@dikac/t-validator/value/validatable";
+import MessageDynamic from "@alirya/validator/message/function/validatable-parameter";
+import Dynamic from "@alirya/validator/value/validatable";
 import EqualParameters from "./equal-parameters";
 
 /**

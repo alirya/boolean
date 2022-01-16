@@ -1,6 +1,6 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-import SafeCast from "@dikac/t-string/safe-cast";
+import Validatable from "@alirya/validatable/validatable";
+import Value from "@alirya/value/value";
+import SafeCast from "@alirya/string/safe-cast";
 import EqualParameters from "./equal-parameters";
 
 export default function EqualParameter<Allow, Expected>(

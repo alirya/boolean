@@ -13,7 +13,7 @@ describe("compiler compatible", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let data : string = value;
     }
 
