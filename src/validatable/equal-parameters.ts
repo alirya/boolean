@@ -1,12 +1,12 @@
-import Value from "@alirya/value/value";
-import Message from "@alirya/message/message";
-import BooleanEqual from "../equal-parameters";
-import Validatable from "@alirya/validatable/validatable";
-import ReadonlyMerge from "@alirya/validator/validatable/readonly-wrapper-parameters";
-import Callback from "@alirya/validator/validatable/callback-class-parameters";
-import Simple from "@alirya/validator/validatable/simple";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
-import EqualMessage from "../assert/string/equal-parameters";
+import Value from '@alirya/value/value';
+import Message from '@alirya/message/message';
+import BooleanEqual from '../equal-parameters';
+import Validatable from '@alirya/validatable/validatable';
+import ReadonlyMerge from '@alirya/validator/validatable/readonly-wrapper-parameters';
+import Callback from '@alirya/validator/validatable/callback-class-parameters';
+import Simple from '@alirya/validator/validatable/simple';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
+import EqualMessage from '../assert/string/equal-parameters';
 
 export default function EqualParameters<
     ValueType  = unknown,

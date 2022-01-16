@@ -1,4 +1,4 @@
-import GuardFunction from "../function/guard";
+import GuardFunction from '../function/guard';
 
 export default interface Guard<Allow, Expect, Arguments extends unknown[] = []> {
 

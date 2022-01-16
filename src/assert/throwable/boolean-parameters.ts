@@ -1,4 +1,4 @@
-import BooleanMessage from "../string/boolean-parameters";
+import BooleanMessage from '../string/boolean-parameters';
 
 /**
  * create {@see TypeError} from {@see BooleanMessage}
@@ -12,5 +12,5 @@ export default function BooleanParameters(
     conversion ?: (value:unknown)=>string
 ) : TypeError {
 
-    return new TypeError(BooleanMessage(value, false, subject, conversion))
+    return new TypeError(BooleanMessage(value, false, subject, conversion));
 }

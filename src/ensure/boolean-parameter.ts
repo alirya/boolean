@@ -1,6 +1,6 @@
-import ThrowableType from "../assert/throwable/boolean-parameter";
-import Value from "@alirya/value/value";
-import BooleanParameters from "./boolean-parameters";
+import ThrowableType from '../assert/throwable/boolean-parameter';
+import Value from '@alirya/value/value';
+import BooleanParameters from './boolean-parameters';
 
 /**
  * Throw exception if given value is no boolean type

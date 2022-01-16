@@ -1,6 +1,6 @@
-import ValueType from "@alirya/value/value";
-import CompareType from "./compare/compare";
-import EqualParameters from "./equal-parameters";
+import ValueType from '@alirya/value/value';
+import CompareType from './compare/compare';
+import EqualParameters from './equal-parameters';
 /**
  * compare {@param value} with {@param compare} using === comparison
  */

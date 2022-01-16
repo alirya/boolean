@@ -1,5 +1,5 @@
-import Guard from "../../dist/ensure/boolean-parameters";
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+import Guard from '../../dist/ensure/boolean-parameters';
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 function throws (message : string, callback : () => any) {
 
@@ -18,7 +18,7 @@ function throws (message : string, callback : () => any) {
 }
 
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         expect(Guard(true)).toBeTrue();
@@ -30,7 +30,7 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     throws(`primitive`, ()=>{
         Guard('str');
@@ -43,7 +43,7 @@ describe("string", function() {
 });
 
 
-describe("number", function() {
+describe('number', function() {
 
     throws(`primitive`, () => {
         Guard(1);
@@ -55,7 +55,7 @@ describe("number", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     throws(`plain`, () => {
         Guard({});
@@ -67,7 +67,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     throws(`anonymous `, () => {
         Guard(function () {});
@@ -83,7 +83,7 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
+describe('empty', function() {
 
     throws(`null `, () => {
         Guard(null);

@@ -1,11 +1,11 @@
-import Boolean from "../../dist/assert/boolean";
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+import Boolean from '../../dist/assert/boolean';
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
 
     it(`integer`, () => {
         try {
-            Boolean(1)
+            Boolean(1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -14,7 +14,7 @@ describe(`number`,function() {
 
     it(`float`, () => {
         try {
-            Boolean(1.1)
+            Boolean(1.1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -40,24 +40,24 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         let value = true;
         Boolean(value);
-        expect(value).toEqual(true)
+        expect(value).toEqual(true);
     });
 
 
     it(`false`, () => {
         let value = false;
         Boolean(value);
-        expect(value).toEqual(false)
+        expect(value).toEqual(false);
     });
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         try {
@@ -79,7 +79,7 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         try {
@@ -101,7 +101,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         try {
@@ -132,7 +132,7 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
+describe('empty', function() {
 
     it(`null `, () => {
         try {

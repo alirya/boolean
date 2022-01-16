@@ -1,6 +1,6 @@
-import ThrowableType from "./throwable/boolean-parameter";
-import Callback from "@alirya/function/assert/callback-parameters";
-import EqualValidation from "../equal";
+import ThrowableType from './throwable/boolean-parameter';
+import Callback from '@alirya/function/assert/callback-parameters';
+import EqualValidation from '../equal';
 
 /**
  * Throw exception if given value is not equal

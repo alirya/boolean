@@ -1,8 +1,8 @@
-import Equal from "../../dist/equal";
+import Equal from '../../dist/equal';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-it("compiler compatible", function() {
+it('compiler compatible', function() {
 
     let value : unknown = 'data';
 

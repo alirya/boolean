@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import BooleanParameters from "./boolean-parameters";
+import Value from '@alirya/value/value';
+import BooleanParameters from './boolean-parameters';
 
 /**
  * create {@see TypeError} from {@see BooleanMessage}

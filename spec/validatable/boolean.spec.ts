@@ -1,7 +1,7 @@
-import Validator from "../../dist/validatable/boolean-parameters";
-import BooleanMessage from "../../dist/assert/string/boolean-parameters";
+import Validator from '../../dist/validatable/boolean-parameters';
+import BooleanMessage from '../../dist/assert/string/boolean-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -19,7 +19,7 @@ describe(`compiler compatible`,function() {
 
             // @ts-expecerror
             let boolean : boolean = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
         }
     });
 
@@ -31,7 +31,7 @@ describe(`compiler compatible`,function() {
 
             // compiler pass
             let boolean : boolean = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
 
         } else {
 
@@ -44,7 +44,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validatable = Validator(<unknown>1, BooleanMessage);;
+        let validatable = Validator(<unknown>1, BooleanMessage);
 
         try {
             // @ts-expecerror
@@ -75,7 +75,7 @@ it(`valid`,function() {
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(true);
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 
@@ -85,7 +85,7 @@ it(`invalid`,function() {
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('a');
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 

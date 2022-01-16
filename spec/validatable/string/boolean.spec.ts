@@ -1,6 +1,6 @@
-import Boolean from "../../../dist/assert/string/boolean-parameter";
+import Boolean from '../../../dist/assert/string/boolean-parameter';
 
-it("enable console log", () => {spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 describe('true',() =>{
 

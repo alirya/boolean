@@ -1,5 +1,5 @@
-import ThrowableType from "./throwable/boolean-parameter";
-import EqualParameters from "./equal-parameters";
+import ThrowableType from './throwable/boolean-parameter';
+import EqualParameters from './equal-parameters';
 
 /**
  * Throw exception if given value is not equal
@@ -16,5 +16,5 @@ export default function EqualParameter<Compare extends unknown>(
     {compare, error = ThrowableType} : EqualParameterArgument<Compare>,
 ) : asserts value is Compare {
 
-   return EqualParameters(value, compare, error)
+   return EqualParameters(value, compare, error);
 }

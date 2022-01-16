@@ -1,10 +1,10 @@
-import Return from "@alirya/validator/validatable/simple";
-import ValidatorValidatable from "@alirya/validator/validatable/validatable";
-import Value from "@alirya/value/value";
-import Message from "@alirya/message/message";
-import Dynamic from "@alirya/validator/message/function/validatable-parameter";
-import BooleanParameters from "./boolean-parameters";
-import NumberMessage from "../assert/string/boolean-parameter";
+import Return from '@alirya/validator/validatable/simple';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable';
+import Value from '@alirya/value/value';
+import Message from '@alirya/message/message';
+import Dynamic from '@alirya/validator/message/function/validatable-parameter';
+import BooleanParameters from './boolean-parameters';
+import NumberMessage from '../assert/string/boolean-parameter';
 
 /**
  * validate if {@param value} is boolean

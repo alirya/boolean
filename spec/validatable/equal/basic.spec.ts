@@ -1,24 +1,24 @@
-import Equal from "../../../dist/validatable/equal-parameters";
-import EqualMessage from "../../../dist/assert/string/equal-parameters";
+import Equal from '../../../dist/validatable/equal-parameters';
+import EqualMessage from '../../../dist/assert/string/equal-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('valid', function () {
 
-    let equal = Equal(1, 1, EqualMessage)
+    let equal = Equal(1, 1, EqualMessage);
 
     expect(equal.valid).toBe(true);
     expect(equal.value).toBe(1);
-    expect(typeof equal.message).toBe("string");
+    expect(typeof equal.message).toBe('string');
 
 });
 
 it('invalid', function () {
 
-    let equal = Equal(1, 2, EqualMessage)
+    let equal = Equal(1, 2, EqualMessage);
 
     expect(equal.valid).toBe(false);
     expect(equal.value).toBe(1);
-    expect(typeof equal.message).toBe("string");
+    expect(typeof equal.message).toBe('string');
 
 });

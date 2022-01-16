@@ -1,8 +1,8 @@
-import Validator from "@alirya/validator/simple";
-import NumberValidatable from "../validatable/boolean-parameters";
-import Validatable from "@alirya/validator/validatable/validatable";
-import BooleanString from "../assert/string/boolean-parameters";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
+import Validator from '@alirya/validator/simple';
+import NumberValidatable from '../validatable/boolean-parameters';
+import Validatable from '@alirya/validator/validatable/validatable';
+import BooleanString from '../assert/string/boolean-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
 /**
  * {@see Validator} for boolean type
@@ -21,6 +21,6 @@ export default function BooleanParameters<MessageType>(
 
         return  NumberValidatable(value, message);
 
-    } as Validator<any, boolean, Readonly<Validatable<any, MessageType>>>
+    } as Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;
 
 }

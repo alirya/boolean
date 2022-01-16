@@ -1,4 +1,4 @@
-import Equal from "./equal-parameters";
+import Equal from './equal-parameters';
 /**
  * @deprecated
  * use original version instead

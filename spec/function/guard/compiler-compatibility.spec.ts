@@ -1,7 +1,7 @@
-import Guard from "@alirya/function/boolean/guard";
+import Guard from '@alirya/function/boolean/guard';
 
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 describe('basic', () =>{
@@ -9,7 +9,7 @@ describe('basic', () =>{
     const guard : Guard<unknown, string> = function(value : unknown) : value is string {
 
         return true;
-    }
+    };
 
     describe('valid', () =>{
         const valid = 'data';
@@ -64,4 +64,4 @@ describe('basic', () =>{
         }
 
     });
-})
+});

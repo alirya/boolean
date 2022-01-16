@@ -1,8 +1,8 @@
-import ValidatableEqual from "../validatable/equal-parameters";
-import Validatable from "@alirya/validator/validatable/validatable";
-import Simple from "@alirya/validator/simple";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
-import EqualMessage from "../assert/string/equal-parameters";
+import ValidatableEqual from '../validatable/equal-parameters';
+import Validatable from '@alirya/validator/validatable/validatable';
+import Simple from '@alirya/validator/simple';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
+import EqualMessage from '../assert/string/equal-parameters';
 
 /**
  * {@template Base} type which can be handled by implmentation
@@ -16,14 +16,14 @@ export default function EqualParameters<
 >(
     compare : Type,
     message : Dynamic<Base, MessageType, [Type]>,
-) : Simple<Base, Type, Validatable<Base, MessageType>>
+) : Simple<Base, Type, Validatable<Base, MessageType>>;
 
 export default function EqualParameters<
     Base = unknown,
     Type = unknown,
 >(
     compare : Type,
-) : Simple<Base, Type, Validatable<Base, string>>
+) : Simple<Base, Type, Validatable<Base, string>>;
 
 export default function EqualParameters<
     Base = unknown,
@@ -38,7 +38,7 @@ export default function EqualParameters<
 
         return ValidatableEqual(value, compare, message);
 
-    } as Simple<Base, Type, Validatable<Base, MessageType>>
+    } as Simple<Base, Type, Validatable<Base, MessageType>>;
 }
 
 
