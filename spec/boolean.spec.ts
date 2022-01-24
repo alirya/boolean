@@ -12,7 +12,7 @@ describe('compiler compatible', function() {
 
     } else {
 
-        // @ts-expecerror
+        // @ts-expect-error
         let result : boolean = value;
     }
 

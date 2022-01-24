@@ -11,7 +11,7 @@ describe('basic', () =>{
         return true;
     };
 
-    describe('valid', () =>{
+    it('valid', () =>{
         const valid = 'data';
 
         if(guard(valid)) {
@@ -27,7 +27,7 @@ describe('basic', () =>{
 
     });
 
-    describe('invalid', () =>{
+    it('invalid', () =>{
 
         const valid = 1;
 
@@ -39,7 +39,7 @@ describe('basic', () =>{
 
         } else {
 
-            // @ts-expecerror
+            // @ts-expect-error
             const string : string = valid;
             const number : number = valid;
             const unknown : unknown = valid;
@@ -47,7 +47,7 @@ describe('basic', () =>{
 
     });
 
-    describe('unknown', () =>{
+    it('unknown', () =>{
 
         const valid = <unknown>1;
 
@@ -58,7 +58,7 @@ describe('basic', () =>{
 
         } else {
 
-            // @ts-expecerror
+            // @ts-expect-error
             const string : string = valid;
             const unknown : unknown = valid;
         }

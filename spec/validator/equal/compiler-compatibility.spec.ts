@@ -14,13 +14,13 @@ it('implicit', function () {
         {
             let number : number = equal.value;
             let unknown : unknown = equal.value;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let string : string = equal.value;
         }
 
         {
             let string : string = equal.message;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let number : number = equal.message;
         }
 
@@ -29,13 +29,13 @@ it('implicit', function () {
         {
             let number : number = equal.value;
             let unknown : unknown = equal.value;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let string : string = equal.value;
         }
 
         {
             let string : string = equal.message;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let number : number = equal.message;
         }
     }
@@ -57,14 +57,14 @@ describe('explicit partial', function () {
 
         {
             let string : string = equal.message;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let number : number = equal.message;
         }
 
     } else {
 
         {
-            // @ts-expecerror
+            // @ts-expect-error
             let specific : 1 = equal.value;
             let number : number = equal.value;
             let unknown : unknown = equal.value;
@@ -72,7 +72,7 @@ describe('explicit partial', function () {
 
         {
             let string : string = equal.message;
-            //  @ts-expecerror
+            //  @ts-expect-error
             let number : number = equal.message;
         }
     }
