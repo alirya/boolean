@@ -20,7 +20,7 @@ it('implicit', function () {
 
 });
 
-describe('explicit partial', function () {
+it('explicit partial', function () {
 
     let equal = Equal<number>(1, 2, EqualMessage);
 
@@ -41,7 +41,7 @@ describe('explicit partial', function () {
 
 });
 
-describe('explicit full', function () {
+it('explicit full', function () {
 
     let equal = Equal<number, 2>(1, 2, EqualMessage);
 

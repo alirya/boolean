@@ -41,7 +41,7 @@ it('implicit', function () {
     }
 });
 
-describe('explicit partial', function () {
+it('explicit partial', function () {
 
     let validator = Equal<number, number, string>(1,  EqualMessage);
 
@@ -79,7 +79,7 @@ describe('explicit partial', function () {
 
 });
 
-describe('explicit full', function () {
+it('explicit full', function () {
 
     let validator = Equal<number, 1>(1,  EqualMessage);
 
