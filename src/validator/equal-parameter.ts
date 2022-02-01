@@ -1,6 +1,4 @@
 import Value from '@alirya/value/value';
-import ValidatableEqual from '../validatable/equal-parameter';
-import Validatable from '@alirya/validator/validatable/validatable';
 import Simple from '@alirya/validator/simple';
 import Message from '@alirya/message/message';
 import ValidatorValidatable from '@alirya/validator/validatable/validatable';
