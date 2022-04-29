@@ -7,7 +7,7 @@ import EqualParameters from './equal-parameters';
 
 export default function EqualParameter<
     Value,
-    Compare extends Value
+    Compare = Value
 >({
       value,
       compare
