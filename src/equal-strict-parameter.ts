@@ -1,11 +1,11 @@
 import ValueType from '@alirya/value/value';
 import CompareType from './compare/compare';
-import EqualParameters from './equal-parameters';
+import EqualParameters from './equal-strict-parameters';
 /**
- * compare {@param value} with {@param compare} using == comparison
+ * compare {@param value} with {@param compare} using === comparison
  */
 
-export default function EqualParameter<
+export default function EqualStrictParameter<
     Value,
     Compare extends Value
 >({
