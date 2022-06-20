@@ -1,4 +1,4 @@
-export default interface Guard<Allow, Expect, Arguments extends unknown[] = []> {
+export default interface Guard<Allow = unknown, Expect = unknown, Arguments extends unknown[] = []> {
 
     (value :Allow|Expect, ...extras : Arguments) : value is Expect;
 }
