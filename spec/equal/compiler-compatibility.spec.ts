@@ -7,7 +7,7 @@ it('compiler compatible', function() {
 
     let value : unknown = 'data';
 
-    if(Equal(value, 'data')) {
+    if(Equal.Parameters(value, 'data')) {
 
         let data : string = value;
 

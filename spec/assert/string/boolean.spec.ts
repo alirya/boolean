@@ -1,12 +1,12 @@
-import Number from '../../../dist/assert/string/boolean-parameters';
+import Number from '../../../dist/assert/string/boolean';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 
 
 it(`valid`, () => {
-    expect(Number( {}, true)).toBe('type is boolean.');
+    expect(Number.Parameters( {}, true)).toBe('type is boolean.');
 });
 
 it(`invalid`, () => {
-    expect(Number( 1, false)).toBe('type must boolean, actual number.');
+    expect(Number.Parameters( 1, false)).toBe('type must boolean, actual number.');
 });

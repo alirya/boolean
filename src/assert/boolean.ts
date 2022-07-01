@@ -1,5 +1,5 @@
-import ThrowableType from './throwable/boolean-parameter';
-import Callback from '@alirya/function/assert/callback-parameters';
+import {BooleanParameters} from './throwable/boolean';
+import {CallbackParameters} from '@alirya/function/assert/callback';
 import BooleanType from '../boolean';
 
 /**
@@ -8,8 +8,8 @@ import BooleanType from '../boolean';
 
 export default function Boolean(
     value : unknown,
-    error : (value:unknown)=>Error = ThrowableType,
+    error : (value:unknown)=>Error = BooleanParameters,
 ) : asserts value is boolean {
 
-    Callback(value, BooleanType, error);
+    CallbackParameters(value, BooleanType, error);
 }

@@ -1,11 +1,11 @@
-import Equal from '../../../dist/validator/equal-parameters';
-import EqualMessage from '../../../dist/assert/string/equal-parameters';
+import Equal from '../../../dist/validator/equal';
+import EqualMessage from '../../../dist/assert/string/equal';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('implicit', function () {
 
-    let validator = Equal(1,  EqualMessage);
+    let validator = Equal.Parameters(1,  EqualMessage.Parameters);
 
     let equal = validator(2);
 
@@ -43,7 +43,7 @@ it('implicit', function () {
 
 it('explicit partial', function () {
 
-    let validator = Equal<number, number, string>(1,  EqualMessage);
+    let validator = Equal.Parameters<number, number, string>(1,  EqualMessage.Parameters);
 
     let equal = validator(2);
 
@@ -81,7 +81,7 @@ it('explicit partial', function () {
 
 it('explicit full', function () {
 
-    let validator = Equal<number, 1>(1,  EqualMessage);
+    let validator = Equal.Parameters<number, 1>(1,  EqualMessage.Parameters);
 
     let equal = validator(2);
 

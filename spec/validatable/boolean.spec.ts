@@ -1,5 +1,5 @@
-import Validator from '../../dist/validatable/boolean-parameters';
-import BooleanMessage from '../../dist/assert/string/boolean-parameters';
+import Validator from '../../dist/validatable/boolean';
+import BooleanMessage from '../../dist/assert/string/boolean';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,7 +7,7 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validatable = Validator(<unknown>false, BooleanMessage);
+        let validatable = Validator.Parameters(<unknown>false, BooleanMessage.Parameters);
 
         if(validatable.valid) {
 
@@ -25,7 +25,7 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validatable = Validator(<unknown>{}, BooleanMessage);
+        let validatable = Validator.Parameters(<unknown>{}, BooleanMessage.Parameters);
 
         if(validatable.valid) {
 
@@ -44,7 +44,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validatable = Validator(<unknown>1, BooleanMessage);
+        let validatable = Validator.Parameters(<unknown>1, BooleanMessage.Parameters);
 
         try {
             // @ts-expect-error
@@ -71,7 +71,7 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validatable = Validator(true, BooleanMessage);
+    let validatable = Validator.Parameters(true, BooleanMessage.Parameters);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(true);
@@ -81,7 +81,7 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validatable = Validator('a', BooleanMessage);
+    let validatable = Validator.Parameters('a', BooleanMessage.Parameters);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('a');

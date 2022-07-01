@@ -1,4 +1,4 @@
-import Guard from '../../dist/ensure/boolean-parameters';
+import Guard from '../../dist/ensure/boolean';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 function throws (message : string, callback : () => any) {
@@ -21,11 +21,11 @@ function throws (message : string, callback : () => any) {
 describe('boolean', function() {
 
     it(`true`, () => {
-        expect(Guard(true)).toBeTrue();
+        expect(Guard.Parameters(true)).toBeTrue();
     });
 
     it(`false`, () => {
-        expect(Guard(false)).toBeFalse();
+        expect(Guard.Parameters(false)).toBeFalse();
     });
 
 });
@@ -33,11 +33,11 @@ describe('boolean', function() {
 describe('string', function() {
 
     throws(`primitive`, ()=>{
-        Guard('str');
+        Guard.Parameters('str');
     });
 
     throws(`primitive`, ()=>{
-        Guard(new String('str'));
+        Guard.Parameters(new String('str'));
     });
 
 });
@@ -46,11 +46,11 @@ describe('string', function() {
 describe('number', function() {
 
     throws(`primitive`, () => {
-        Guard(1);
+        Guard.Parameters(1);
     });
 
     throws(`nan`, () => {
-        Guard(NaN);
+        Guard.Parameters(NaN);
     });
 
 });
@@ -58,11 +58,11 @@ describe('number', function() {
 describe('object', function() {
 
     throws(`plain`, () => {
-        Guard({});
+        Guard.Parameters({});
     });
 
     throws(`instance`, () => {
-        Guard(new Map());
+        Guard.Parameters(new Map());
     });
 
 });
@@ -70,15 +70,15 @@ describe('object', function() {
 describe('function', function() {
 
     throws(`anonymous `, () => {
-        Guard(function () {});
+        Guard.Parameters(function () {});
     });
 
     throws(`anonymous arrow`, () => {
-        Guard(()=>{});
+        Guard.Parameters(()=>{});
     });
 
     throws(`named`, () => {
-        Guard(isNaN);
+        Guard.Parameters(isNaN);
     });
 
 });
@@ -86,11 +86,11 @@ describe('function', function() {
 describe('empty', function() {
 
     throws(`null `, () => {
-        Guard(null);
+        Guard.Parameters(null);
     });
 
     throws(`undefined`, () => {
-        Guard(undefined);
+        Guard.Parameters(undefined);
     });
 
 });

@@ -6,5 +6,5 @@ it('compiler compatible', function() {
 
     let value : unknown = 'data';
 
-    expect(Equal(value, 'data')).toBe(true);
+    expect(Equal.Parameters(value, 'data')).toBe(true);
 });

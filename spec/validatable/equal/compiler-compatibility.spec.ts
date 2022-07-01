@@ -1,11 +1,11 @@
-import Equal from '../../../dist/validatable/equal-parameters';
-import EqualMessage from '../../../dist/assert/string/equal-parameters';
+import Equal from '../../../dist/validatable/equal';
+import EqualMessage from '../../../dist/assert/string/equal';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('implicit', function () {
 
-    let equal = Equal<string>('1', 2, EqualMessage);
+    let equal = Equal.Parameters<string>('1', 2, EqualMessage.Parameters);
 
     if(equal.valid) {
         // @ts-expect-error
@@ -22,7 +22,7 @@ it('implicit', function () {
 
 it('explicit partial', function () {
 
-    let equal = Equal<number>(1, 2, EqualMessage);
+    let equal = Equal.Parameters<number>(1, 2, EqualMessage.Parameters);
 
     if(equal.valid) {
 
@@ -43,7 +43,7 @@ it('explicit partial', function () {
 
 it('explicit full', function () {
 
-    let equal = Equal<number, 2>(1, 2, EqualMessage);
+    let equal = Equal.Parameters<number, 2>(1, 2, EqualMessage.Parameters);
 
     if(equal.valid) {
 
