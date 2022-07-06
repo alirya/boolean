@@ -1,4 +1,4 @@
-import Equal from '../../dist/equal';
+import Equal from '../../dist/equal.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,11 +1,11 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import Guard from '../boolean';
-import Return from '@alirya/validator/validatable/simple';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import BooleanMessage from '../assert/string/boolean';
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import Guard from '../boolean.js';
+import Return from '@alirya/validator/validatable/simple.js';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import BooleanMessage from '../assert/string/boolean.js';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
 /**
  * validate if {@param value} is boolean
  *

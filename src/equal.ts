@@ -1,5 +1,5 @@
-import ValueType from '@alirya/value/value';
-import CompareType from './compare/compare';
+import ValueType from '@alirya/value/value.js';
+import CompareType from './compare/compare.js';
 
 /**
  * compare {@param value} with {@param compare} using == comparison

@@ -1,4 +1,4 @@
-import Type from '../dist/boolean';
+import Type from '../dist/boolean.js';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 

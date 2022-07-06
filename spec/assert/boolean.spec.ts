@@ -1,4 +1,4 @@
-import Boolean from '../../dist/assert/boolean';
+import Boolean from '../../dist/assert/boolean.js';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {

@@ -1,6 +1,6 @@
-import SafeCast from '@alirya/string/safe-cast';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import SafeCast from '@alirya/string/safe-cast.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export function EqualParameters(
     value : unknown,

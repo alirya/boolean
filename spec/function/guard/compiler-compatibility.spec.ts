@@ -1,4 +1,4 @@
-import Guard from '@alirya/function/boolean/guard';
+import Guard from '@alirya/function/boolean/guard.js';
 
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});

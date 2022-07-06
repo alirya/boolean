@@ -1,4 +1,4 @@
-import Equal from '../../../../dist/assert/string/equal';
+import Equal from '../../../../dist/assert/string/equal.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 

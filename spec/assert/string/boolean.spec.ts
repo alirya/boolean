@@ -1,4 +1,4 @@
-import Number from '../../../dist/assert/string/boolean';
+import Number from '../../../dist/assert/string/boolean.js';
 
 it('enable console log', () => {spyOn(console, 'log').and.callThrough();});
 

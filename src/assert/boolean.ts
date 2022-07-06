@@ -1,6 +1,6 @@
-import {BooleanParameters} from './throwable/boolean';
-import {CallbackParameters} from '@alirya/function/assert/callback';
-import BooleanType from '../boolean';
+import {BooleanParameters} from './throwable/boolean.js';
+import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import BooleanType from '../boolean.js';
 
 /**
  * Throw exception if given value is no boolean type
