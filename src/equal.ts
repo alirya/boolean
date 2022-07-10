@@ -12,6 +12,10 @@ export function EqualParameters<
     return value == compare;
 }
 
+export type EqualArgument<
+  Value,
+  Compare = Value
+  > = ValueType<Value> & CompareType<Compare>;
 
 /**
  * compare {@param value} with {@param compare} using == comparison
@@ -23,7 +27,7 @@ export function EqualParameter<
 >({
       value,
       compare
-  } : ValueType<Value> & CompareType<Compare>) : boolean {
+  } : EqualArgument<Value, Compare>) : boolean {
 
     return EqualParameters(value, compare);
 }
@@ -34,5 +38,9 @@ export function EqualParameter<
 namespace Equal {
     export const Parameters = EqualParameters;
     export const Parameter = EqualParameter;
+    export type Argument<
+      Value,
+      Compare = Value
+      > = EqualArgument<Value, Compare>;
 }
 export default Equal;
