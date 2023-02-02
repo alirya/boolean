@@ -18,18 +18,18 @@ import Message from '@alirya/message/message';
 export function BooleanParameters<Argument, MessageType>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageType>
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+) : Return<Argument, boolean, MessageType>;
 
 export function BooleanParameters<Argument, MessageType>(
     value : Argument,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>;
+) : Return<Argument, boolean, MessageType>;
 
 export function BooleanParameters<Argument, MessageType>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageType|string> = BooleanMessage.Parameters
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType|string>>> {
+) : Return<Argument, boolean, MessageType|string> {
 
-    return <Return<Argument, boolean, Readonly<ValidatorValidatable<any, MessageType>>>> CallbackParameters(value, Guard, message);
+    return CallbackParameters(value, Guard, message);
 }
 
 
@@ -45,19 +45,19 @@ export function BooleanParameters<Argument, MessageType>(
 export function BooleanParameter<Argument, MessageType>({
        value,
    } : Value<Argument>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, string>>>;
+) : Return<Argument, boolean, string>;
 
 export function BooleanParameter<Argument, MessageType>({
        value,
        message,
    } : Value<Argument> & Message<ValidatableParameter<Argument, MessageType>>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, MessageType>>>;
+) : Return<Argument, boolean, MessageType>;
 
 export function BooleanParameter<Argument, MessageType>({
         value,
         message = BooleanMessage.Parameter,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageType|string>>,
-) : Return<Argument, boolean, Readonly<ValidatorValidatable<unknown, MessageType|string>>> {
+) : Return<Argument, boolean, MessageType|string> {
 
     return BooleanParameters(value, (value, valid) => message({value, valid}));
 }

@@ -7,21 +7,21 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 /**
  * {@see Validator} for boolean type
  */
-export function BooleanParameters() : Validator<any, boolean, Readonly<Validatable<any, string>>>;
+export function BooleanParameters() : Validator<any, boolean, string>;
 
 export function BooleanParameters<MessageType>(
     message : ValidatableParameters<any, MessageType>
-) : Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;
+) : Validator<any, boolean, MessageType>;
 
 export function BooleanParameters<MessageType>(
     message : ValidatableParameters<any, MessageType|string> = BooleanString.Parameters
-) : Validator<any, boolean, Readonly<Validatable<any, MessageType>>> {
+) : Validator<any, boolean, MessageType|string> {
 
     return function (value) {
 
         return  NumberValidatable.Parameters(value, message);
 
-    } as Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;
+    } as Validator<any, boolean, MessageType|string>;
 
 }
 
@@ -29,15 +29,15 @@ export function BooleanParameters<MessageType>(
 /**
  * {@see Validator} for boolean type
  */
-export function BooleanParameter() : Validator<any, boolean, Readonly<Validatable<any, string>>>;
+export function BooleanParameter() : Validator<any, boolean, string>;
 
 export function BooleanParameter<MessageType>(
     message : ValidatableParameter<any, MessageType>
-) : Validator<any, boolean, Readonly<Validatable<any, MessageType>>>;
+) : Validator<any, boolean, MessageType>;
 
 export function BooleanParameter<MessageType>(
     message : ValidatableParameter<any, MessageType|string> = BooleanString.Parameter
-) : Validator<any, boolean, Readonly<Validatable<any, MessageType|string>>> {
+) : Validator<any, boolean, MessageType|string> {
 
     return BooleanParameters((value, valid) => message({value, valid}));
 
