@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/simple';
-import NumberValidatable from '../validatable/boolean';
-import Validatable from '@alirya/validator/validatable/validatable';
-import BooleanString from '../assert/string/boolean';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/simple.js';
+import NumberValidatable from '../validatable/boolean.js';
+import Validatable from '@alirya/validator/validatable/validatable.js';
+import BooleanString from '../assert/string/boolean.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
 
 /**
  * {@see Validator} for boolean type

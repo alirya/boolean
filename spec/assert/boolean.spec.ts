@@ -1,4 +1,4 @@
-import Boolean from '../../dist/assert/boolean';
+import Boolean from '../../dist/assert/boolean.js';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
@@ -43,14 +43,14 @@ describe(`number`,function() {
 describe('boolean', function() {
 
     it(`true`, () => {
-        let value = true;
+        const value = true;
         Boolean(value);
         expect(value).toEqual(true);
     });
 
 
     it(`false`, () => {
-        let value = false;
+        const value = false;
         Boolean(value);
         expect(value).toEqual(false);
     });

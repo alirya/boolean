@@ -1,5 +1,5 @@
-import Validator from '../../dist/validator/boolean';
-import BooleanMessage from '../../dist/assert/string/boolean';
+import Validator from '../../dist/validator/boolean.js';
+import BooleanMessage from '../../dist/assert/string/boolean.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,38 +7,38 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = Validator.Parameters(BooleanMessage.Parameters);
-        let validatable = validator(<unknown>true);
+        const validator = Validator.Parameters(BooleanMessage.Parameters);
+        const validatable = validator(<unknown>true);
 
         if(validatable.valid) {
 
             // compiler pass
-            let boolean : boolean = validatable.value;
+            const boolean : boolean = validatable.value;
             expect(boolean).toBe(true);
 
         } else {
 
             // @ts-expect-error
-            let boolean : boolean = validatable.value;
+            const boolean : boolean = validatable.value;
             fail('validatable.valid should false');
         }
     });
 
     it(`invalid value`,function() {
 
-        let validator = Validator.Parameters(BooleanMessage.Parameters);
-        let validatable = validator({});
+        const validator = Validator.Parameters(BooleanMessage.Parameters);
+        const validatable = validator({});
 
         if(validatable.valid) {
 
             // compiler pass
-            let boolean : boolean = validatable.value;
+            const boolean : boolean = validatable.value;
             fail('validatable.valid should false');
 
         } else {
 
             // @ts-expect-error
-            let boolean : boolean = validatable.value;
+            const boolean : boolean = validatable.value;
             // @ts-expect-error
             expect(boolean).toEqual({});
         }
@@ -46,8 +46,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = Validator.Parameters(BooleanMessage.Parameters);
-        let validatable = validator(1);
+        const validator = Validator.Parameters(BooleanMessage.Parameters);
+        const validatable = validator(1);
 
         try {
             // @ts-expect-error
@@ -62,7 +62,7 @@ describe(`compiler compatible`,function() {
 
         try {
             // @ts-expect-error
-            validatable.message = 'message';
+            validatable.message.js = 'message';
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -74,8 +74,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = Validator.Parameters(BooleanMessage.Parameters);
-    let validatable = validator(false);
+    const validator = Validator.Parameters(BooleanMessage.Parameters);
+    const validatable = validator(false);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(false);
@@ -85,8 +85,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = Validator.Parameters(BooleanMessage.Parameters);
-    let validatable = validator('a');
+    const validator = Validator.Parameters(BooleanMessage.Parameters);
+    const validatable = validator('a');
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('a');

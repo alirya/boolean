@@ -1,19 +1,19 @@
-import Type from '../dist/boolean';
+import Type from '../dist/boolean.js';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('compiler compatible', function() {
 
-    let value : unknown = true;
+    const value : unknown = true;
 
     if(Type(value)) {
 
-        let result : boolean = value;
+        const result : boolean = value;
 
     } else {
 
         // @ts-expect-error
-        let result : boolean = value;
+        const result : boolean = value;
     }
 
 });

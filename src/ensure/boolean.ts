@@ -1,6 +1,6 @@
-import ThrowableType from '../assert/throwable/boolean';
-import AssertType from '../assert/boolean';
-import Value from '@alirya/value/value';
+import ThrowableType from '../assert/throwable/boolean.js';
+import AssertType from '../assert/boolean.js';
+import Value from '@alirya/value/value.js';
 
 /**
  * Throw exception if given value is no boolean type

@@ -1,5 +1,5 @@
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 /**
  * make a string message for boolean type
@@ -12,7 +12,7 @@ import Value from '@alirya/value/value';
 export function BooleanParameters(
     value : unknown,
     valid : boolean,
-    subject : string = 'type',
+    subject  = 'type',
     conversion : (value:unknown)=>string = value=>typeof value
 ) : string {
 

@@ -1,13 +1,13 @@
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
-import BooleanEqual from '../equal';
-import Validatable from '@alirya/validatable/validatable';
-import {ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper';
-import {CallbackClassParameters} from '@alirya/validator/validatable/callback';
-import Simple from '@alirya/validator/validatable/simple';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import EqualMessage from '../assert/string/equal';
-import DynamicValidatable from '@alirya/validator/value/validatable';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
+import BooleanEqual from '../equal.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import {ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper.js';
+import {CallbackClassParameters} from '@alirya/validator/validatable/callback.js';
+import Simple from '@alirya/validator/validatable/simple.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import EqualMessage from '../assert/string/equal.js';
+import DynamicValidatable from '@alirya/validator/value/validatable.js';
 
 export function EqualParameters<
     ValueType  = unknown,

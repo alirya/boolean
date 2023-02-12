@@ -1,5 +1,5 @@
-import BooleanMessage from '../string/boolean';
-import Value from '@alirya/value/value';
+import BooleanMessage from '../string/boolean.js';
+import Value from '@alirya/value/value.js';
 
 /**
  * create {@see TypeError} from {@see BooleanMessage}

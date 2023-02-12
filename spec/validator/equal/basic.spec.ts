@@ -1,13 +1,13 @@
-import EqualMessage from '../../../dist/assert/string/equal';
-import Equal from '../../../dist/validator/equal';
+import EqualMessage from '../../../dist/assert/string/equal.js';
+import Equal from '../../../dist/validator/equal.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('valid', function () {
 
-    let validator = Equal.Parameters(1,  EqualMessage.Parameters);
+    const validator = Equal.Parameters(1,  EqualMessage.Parameters);
 
-    let equal = validator(1);
+    const equal = validator(1);
 
     expect(equal.valid).toBe(true);
     expect(equal.value).toBe(1);
@@ -17,9 +17,9 @@ it('valid', function () {
 
 it('invalid', function () {
 
-    let validator = Equal.Parameters(1,  EqualMessage.Parameters);
+    const validator = Equal.Parameters(1,  EqualMessage.Parameters);
 
-    let equal = validator(2);
+    const equal = validator(2);
 
     expect<boolean>(equal.valid).toBe(false);
     expect(equal.value).toBe(2);
