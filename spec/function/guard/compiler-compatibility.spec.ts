@@ -1,4 +1,4 @@
-import Guard from '../../../dist/function/guard';
+import Guard from '../../../dist/function/guard.js';
 
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
