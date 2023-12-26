@@ -1,5 +1,5 @@
 {
-  "name": "@alirya/boolean",
+  "name": "@axiona/boolean",
   "version": "0.12.1",
   "description": "Typescript boolean",
   "publishConfig": {
@@ -12,19 +12,19 @@
     "cache": false
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/alirya/boolean",
+  "homepage": "https://github.com/axiona/boolean",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alirya/boolean"
+    "url": "https://github.com/axiona/boolean"
   },
   "dependencies": {
     "tslib": "^2.5.0",
-    "@alirya/function": "^0.17.1",
-    "@alirya/message": "^0.13.1",
-    "@alirya/string": "^0.17.1",
-    "@alirya/validatable": "^0.21.1",
-    "@alirya/validator": "^0.20.1",
-    "@alirya/value": "^0.16.1",
+    "@axiona/function": "^0.17.1",
+    "@axiona/message": "^0.13.1",
+    "@axiona/string": "^0.17.1",
+    "@axiona/validatable": "^0.21.1",
+    "@axiona/validator": "^0.20.1",
+    "@axiona/value": "^0.16.1",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
@@ -52,9 +52,9 @@
     "@types/node": "^16.11.7"
   },
   "scripts": {
-    "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
-    "spec-run": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json --reporter=jasmine-ts-console-reporter",
-    "spec-run-debug": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine-debug.json --reporter=jasmine-ts-console-reporter",
+    "spec-run-js": "jasmine --config=./jasmine.json",
+    "spec-run": "jasmine --config=./jasmine.json",
+    "spec-run-debug": "jasmine --config=./jasmine-debug.json",
     "spec": "npm-run-all spec-compile spec-run",
     "spec-compile": "npm-run-all _spec-compile-script spec-cleanup",
     "spec-compile-watch": "npm-run-all --sequential _spec-ensure-directory --parallel _spec-compile-watch-script spec-cleanup-watch",

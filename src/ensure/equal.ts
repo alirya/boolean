@@ -1,6 +1,6 @@
 import ThrowableType from '../assert/throwable/boolean.js';
 import {EqualParameters as AssertEqualParameters} from '../assert/equal.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 /**
  * Throw exception if given value is no boolean type

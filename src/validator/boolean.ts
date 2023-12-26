@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import NumberValidatable from '../validatable/boolean.js';
-import Validatable from '@alirya/validator/validatable/validatable.js';
+import Validatable from '@axiona/validator/validatable/validatable.js';
 import BooleanString from '../assert/string/boolean.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 
 /**
  * {@see Validator} for boolean type

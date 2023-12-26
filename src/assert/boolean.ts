@@ -1,5 +1,5 @@
 import {BooleanParameters} from './throwable/boolean.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import BooleanType from '../boolean.js';
 
 /**

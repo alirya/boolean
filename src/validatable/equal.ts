@@ -1,13 +1,13 @@
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
 import BooleanEqual from '../equal.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import {ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper.js';
-import {CallbackClassParameters} from '@alirya/validator/validatable/callback.js';
-import Simple from '@alirya/validator/validatable/simple.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import {ReadonlyWrapperParameters} from '@axiona/validator/validatable/readonly-wrapper.js';
+import {CallbackClassParameters} from '@axiona/validator/validatable/callback.js';
+import Simple from '@axiona/validator/validatable/simple.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import EqualMessage from '../assert/string/equal.js';
-import DynamicValidatable from '@alirya/validator/value/validatable.js';
+import DynamicValidatable from '@axiona/validator/value/validatable.js';
 
 export function EqualParameters<
     ValueType  = unknown,

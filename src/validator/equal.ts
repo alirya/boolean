@@ -1,13 +1,13 @@
 import ValidatableEqual from '../validatable/equal.js';
-import Validatable from '@alirya/validator/validatable/validatable.js';
-import Simple from '@alirya/validator/simple.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Validatable from '@axiona/validator/validatable/validatable.js';
+import Simple from '@axiona/validator/simple.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import EqualMessage from '../assert/string/equal.js';
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
+import ValidatorValidatable from '@axiona/validator/validatable/validatable.js';
 import EqualMessageParameter from '../assert/string/equal.js';
-import DynamicValidatable from '@alirya/validator/value/validatable.js';
+import DynamicValidatable from '@axiona/validator/value/validatable.js';
 
 /**
  * {@template Base} type which can be handled by implmentation

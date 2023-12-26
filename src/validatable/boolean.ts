@@ -1,11 +1,11 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
 import Guard from '../boolean.js';
-import Return from '@alirya/validator/validatable/simple.js';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Return from '@axiona/validator/validatable/simple.js';
+import ValidatorValidatable from '@axiona/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import BooleanMessage from '../assert/string/boolean.js';
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
 /**
  * validate if {@param value} is boolean
  *

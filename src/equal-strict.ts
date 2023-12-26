@@ -1,4 +1,4 @@
-import ValueType from '@alirya/value/value.js';
+import ValueType from '@axiona/value/value.js';
 import CompareType from './compare/compare.js';
 /**
  * compare {@param value} with {@param compare} using === comparison
